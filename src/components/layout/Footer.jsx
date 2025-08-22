@@ -10,10 +10,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">T</span>
+              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">N</span>
               </div>
-              <span className="text-xl font-bold">Tima's Collection</span>
+              <span className="text-xl font-bold">Neyma</span>
             </div>
             <p className="text-gray-400">
               Your destination for premium shoes, bags, and clothing for men and women.
@@ -91,15 +91,15 @@ export function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <MapPin size={16} className="text-green-600" />
-                <span className="text-gray-400 text-sm">123 Fashion Street, City, State 12345</span>
+                <span className="text-gray-400 text-sm">NO 21 Rayfield Rd, Jos, Plateau State, Nigeria</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-green-600" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+2349069470173</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-green-600" />
-                <span className="text-gray-400 text-sm">info@neyma.com</span>
+                <span className="text-gray-400 text-sm">inaneyma@gmail.com</span>
               </div>
             </div>
           </div>

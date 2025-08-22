@@ -80,6 +80,7 @@ export function useCart() {
           throw error
         }
         showSuccess('🛒 Cart updated! Item quantity increased.');
+        alert('Cart updated! Item quantity increased.');
       } else {
         // Add new item
         const { error } = await supabase
@@ -98,6 +99,7 @@ export function useCart() {
           throw error
         }
         showSuccess('🛒 Great choice! Item added to your cart.');
+        alert('Great choice! Item added to your cart.');
       }
 
       fetchCart()
@@ -107,6 +109,57 @@ export function useCart() {
       throw error
     }
   }
+
+  // const addToCart = async (productId, quantity = 1, size, color) => {
+  //   if (!user) {
+  //     showError('Please sign in to add items to cart');
+  //     return
+  //   }
+
+  //   try {
+  //     // Check if item already exists
+  //     const existingItem = items.find(
+  //       item => item.product_id === productId && item.size === size && item.color === color
+  //     )
+
+  //     if (existingItem) {
+  //       // Update quantity
+  //       const { error } = await supabase
+  //         .from('cart_items')
+  //         .update({ quantity: existingItem.quantity + quantity })
+  //         .eq('id', existingItem.id)
+
+  //       if (error) {
+  //         throw error
+  //       }
+  //       showSuccess('🛒 Cart updated! Item quantity increased.');
+  //     } else {
+  //       // Add new item
+  //       const { error } = await supabase
+  //         .from('cart_items')
+  //         .insert([
+  //           {
+  //             user_id: user.id,
+  //             product_id: productId,
+  //             quantity,
+  //             size,
+  //             color,
+  //           },
+  //         ])
+
+  //       if (error) {
+  //         throw error
+  //       }
+  //       showSuccess('🛒 Great choice! Item added to your cart.');
+  //     }
+
+  //     fetchCart()
+  //   } catch (error) {
+  //     console.error('Error adding to cart:', error)
+  //     showError('Failed to add item to cart')
+  //     throw error
+  //   }
+  // }
 
   const updateCartItem = async (id, quantity) => {
     try {
