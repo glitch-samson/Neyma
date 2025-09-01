@@ -4,6 +4,7 @@ import { Menu, X, ShoppingCart, User, Search } from 'lucide-react'
 import { useAuth } from '../../hooks/useAuth'
 import { useCart } from '../../hooks/useCart'
 import { Button } from '../ui/Button'
+import { SearchModal } from '../SearchModal'
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
