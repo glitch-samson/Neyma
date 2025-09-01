@@ -59,7 +59,11 @@ export function Header() {
           <div className="flex items-center space-x-4">
             {user ? (
               <>
-                <button className="text-gray-700 hover:text-amber-900 transition-colors">
+                <button
+                  onClick={() => setIsSearchModalOpen(true)}
+                  className="text-gray-700 hover:text-amber-900 transition-colors"
+                  aria-label="Search products"
+                >
                   <Search size={20} />
                 </button>
                 
