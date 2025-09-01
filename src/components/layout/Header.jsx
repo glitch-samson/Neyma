@@ -8,6 +8,7 @@ import { SearchModal } from '../SearchModal'
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false)
   const { user, profile, signOut } = useAuth()
   const { totalItems } = useCart()
   const location = useLocation()
