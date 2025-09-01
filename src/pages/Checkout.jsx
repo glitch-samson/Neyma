@@ -291,7 +291,7 @@ export function Checkout() {
               <div>
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">Order Process</h3>
                 <div className="text-sm text-blue-800 space-y-2">
-                  <p>• After submitting your order, our admin team will be notified immediately</p>
+                  <p>• After submitting your order, our sales team will be notified immediately</p>
                   <p>• We will contact you via WhatsApp to confirm your order details</p>
                   <p>• Payment will be arranged during the confirmation call</p>
                   <p>• Pickup or delivery will be coordinated based on your preferred location</p>

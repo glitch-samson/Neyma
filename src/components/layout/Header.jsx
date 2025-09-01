@@ -4,9 +4,11 @@ import { Menu, X, ShoppingCart, User, Search } from 'lucide-react'
 import { useAuth } from '../../hooks/useAuth'
 import { useCart } from '../../hooks/useCart'
 import { Button } from '../ui/Button'
+import { SearchModal } from '../SearchModal'
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false)
   const { user, profile, signOut } = useAuth()
   const { totalItems } = useCart()
   const location = useLocation()
@@ -57,7 +59,11 @@ export function Header() {
           <div className="flex items-center space-x-4">
             {user ? (
               <>
-                <button className="text-gray-700 hover:text-amber-900 transition-colors">
+                <button
+                  onClick={() => setIsSearchModalOpen(true)}
+                  className="text-gray-700 hover:text-amber-900 transition-colors"
+                  aria-label="Search products"
+                >
                   <Search size={20} />
                 </button>
                 
@@ -101,7 +107,7 @@ export function Header() {
                         to="/admin"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50"
                       >
-                        Admin Dashboard
+                        Sales Dashboard
                       </Link>
                     )}
                     <button
@@ -158,6 +164,12 @@ export function Header() {
           </div>
         </div>
       )}
+
+      {/* Search Modal */}
+      <SearchModal
+        isOpen={isSearchModalOpen}
+        onClose={() => setIsSearchModalOpen(false)}
+      />
     </header>
   )
 }
