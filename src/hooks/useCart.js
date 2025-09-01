@@ -32,6 +32,7 @@ export function useCart() {
           )
         `)
         .eq('user_id', user.id)
+        .order('created_at', { ascending: true })
 
       if (error) {
         // Check if JWT is expired and sign out user
