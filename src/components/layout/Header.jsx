@@ -164,6 +164,12 @@ export function Header() {
           </div>
         </div>
       )}
+
+      {/* Search Modal */}
+      <SearchModal
+        isOpen={isSearchModalOpen}
+        onClose={() => setIsSearchModalOpen(false)}
+      />
     </header>
   )
 }
